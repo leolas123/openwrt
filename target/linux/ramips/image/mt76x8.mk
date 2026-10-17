@@ -1008,6 +1008,16 @@ define Device/tplink_re220-v2
 endef
 TARGET_DEVICES += tplink_re220-v2
 
+define Device/tplink_re300-v1
+  $(Device/tplink-safeloader)
+  IMAGE_SIZE := 7808k
+  DEVICE_MODEL := RE300
+  DEVICE_VARIANT := v1
+  DEVICE_PACKAGES := kmod-mt76x2
+  TPLINK_BOARD_ID := RE300-V1
+endef
+TARGET_DEVICES += tplink_re300-v1
+
 define Device/tplink_re305-v1
   $(Device/tplink-safeloader)
   IMAGE_SIZE := 7680k
